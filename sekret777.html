@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Искусство глубокой близости / Art of Deep Intimacy</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background: #111;
+    color: #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
+    animation: rotate 30s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}
+
+.container {
+    position: relative;
+    background: rgba(0,0,0,0.45);
+    padding: 50px;
+    max-width: 900px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+    backdrop-filter: blur(12px);
+    animation: fadeIn 2s ease-in-out;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #ffdd55;
+    text-shadow: 0 0 15px #ff7e5f, 0 0 25px #ff7e5f, 0 0 40px #ff7e5f;
+    animation: glowText 2s infinite alternate;
+}
+
+p, li {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeText 1.5s forwards;
+}
+
+li {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.highlight {
+    color: #ff69b4;
+    font-weight: bold;
+    text-shadow: 0 0 15px #ff69b4, 0 0 25px #ff69b4;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    margin-top: 30px;
+    text-align: center;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: white;
+    font-size: 1.4em;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+}
+
+.button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+    background: linear-gradient(90deg, #feb47b, #ff7e5f);
+}
+
+#langSwitch {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: linear-gradient(90deg, #56ab2f, #a8e063);
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#langSwitch:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeText {
+    to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(30px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes glowText {
+    from { text-shadow: 0 0 10px #ff7e5f, 0 0 20px #ff7e5f; }
+    to { text-shadow: 0 0 20px #ff7e5f, 0 0 40px #ff7e5f, 0 0 60px #ff7e5f; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1 id="title">Искусство глубокой близости</h1>
+
+<button id="langSwitch">Switch to English / Переключить язык</button>
+
+<div id="content">
+<p>Представьте сейф. Цифры знакомы каждому, но без правильной комбинации — он навсегда закрыт. Одно правильное касание — и всё открывается мгновенно.</p>
+<p>Большинство техник, включая минет и ласки, приятны, но они лишь разогревают систему. Только секрет активирует всю сеть удовольствия и перепрошивает ощущения в 10 раз сильнее.</p>
+<p class="highlight">🔑 Секрет прост и мгновенно работает:</p>
+<ul>
+<li>Не требует опыта</li>
+<li>Работает в любых условиях</li>
+<li>Усиливает эмоциональную связь</li>
+<li>Делает женщину магнитом, к которому мужчина стремится снова и снова</li>
+</ul>
+<p>Научно: головка, пучок нервных окончаний и «кнопка» в организме активируют нейротрансмиттеры (дофамин, оксид азота) и вагусные импульсы, перепрошивая нервную сеть.</p>
+<p>Позиции: мужчина стоит, женщина сидит. Это оптимально для передачи энергии и усиления ощущений, позволяет максимально контролировать ритм и точность касания.</p>
+<p>После открытия секрета, даже обычные ласки и минет заиграют в 10 раз сильнее, и мужчина станет навсегда привязан к женщине.</p>
+</div>
+
+<a href="https://t.me/tribute/app?startapp=sAui" class="button" target="_blank">Открой секрет здесь / Unlock the secret here ♥️</a>
+</div>
+
+<script>
+const content = document.getElementById('content');
+const title = document.getElementById('title');
+const langBtn = document.getElementById('langSwitch');
+
+let isRussian = true;
+
+const russianText = {
+    title: "Искусство глубокой близости",
+    content: `
+<p>Представьте сейф. Цифры знакомы каждому, но без правильной комбинации — он навсегда закрыт. Одно правильное касание — и всё открывается мгновенно.</p>
+<p>Большинство техник, включая минет и ласки, приятны, но они лишь разогревают систему. Только секрет активирует всю сеть удовольствия и перепрошивает ощущения в 10 раз сильнее.</p>
+<p class="highlight">🔑 Секрет прост и мгновенно работает:</p>
+<ul>
+<li>Не требует опыта</li>
+<li>Работает в любых условиях</li>
+<li>Усиливает эмоциональную связь</li>
+<li>Делает женщину магнитом, к которому мужчина стремится снова и снова</li>
+</ul>
+<p>Научно: головка, пучок нервных окончаний и «кнопка» в организме активируют нейротрансмиттеры (дофамин, оксид азота) и вагусные импульсы, перепрошивая нервную сеть.</p>
+<p>Позиции: мужчина стоит, женщина сидит. Это оптимально для передачи энергии и усиления ощущений, позволяет максимально контролировать ритм и точность касания.</p>
+<p>После открытия секрета, даже обычные ласки и минет заиграют в 10 раз сильнее, и мужчина станет навсегда привязан к женщине.</p>
+`
+};
+
+const englishText = {
+    title: "Art of Deep Intimacy",
+    content: `
+<p>Imagine a safe. Numbers are familiar, but without the right combination — it stays locked. One correct touch — and it opens instantly.</p>
+<p>Most techniques, including oral and caresses, are pleasant but just warm up the system. Only the secret activates the entire pleasure network, amplifying sensations tenfold.</p>
+<p class="highlight">🔑 The secret is simple and works instantly:</p>
+<ul>
+<li>No experience required</li>
+<li>Works in any conditions</li>
+<li>Enhances emotional connection</li>
+<li>Makes the woman a magnet the man will always seek</li>
+</ul>
+<p>Scientifically: the glans, nerve bundle, and body "button" activate neurotransmitters (dopamine, nitric oxide) and vagus impulses, rewiring the nervous network.</p>
+<p>Positions: the man stands, the woman sits. This is optimal for energy transfer and intensifying sensations, allowing full control of rhythm and precise touch.</p>
+<p>Once the secret is known, even ordinary touches and oral become ten times stronger
+и the man becomes permanently attached to the woman.</p>
+`
+};
+
+langBtn.addEventListener('click', () => {
+if (isRussian) {
+title.innerHTML = englishText.title;
+content.innerHTML = englishText.content;
+langBtn.innerText = "Переключить на русский / Switch to Russian";
+} else {
+title.innerHTML = russianText.title;
+content.innerHTML = russianText.content;
+langBtn.innerText = "Switch to English / Переключить язык";
+}
+isRussian = !isRussian;
+});
+</script>
+
+</body> </html> ```
